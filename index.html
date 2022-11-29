@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegForm By ULtaR</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background:linear-gradient(20deg, #374733, #432d2d);
+            display: flex;
+            align-items: center;
+            justify-content:flex-end;
+            padding-right: 100px;
+        }
+        .FORM{
+            width: 600px;
+            height: 800px;
+            border-radius:30px;
+            display: flex;
+            flex-flow:column nowrap;
+            align-items: center;
+            justify-content: flex-start;
+            background:linear-gradient(20deg, #232c21, #291f1f);
+            box-shadow:  20px 20px 30px 1px #5e5252,
+                -20px -20px 40px 1px #614e4e;
+            font-family: 'roboto', sans-serif;
+            font-weight: bold;
+            padding: 20px;
+        }
+        .FORM p{
+            font-size:32px;
+            width: 90%;
+            position: relative;
+            left: 20px;
+            color:aliceblue;
+            letter-spacing: 2px;
+            -webkit-text-stroke: .1px aliceblue;
+            -webkit-text-fill-color: transparent;
+            margin: 10px;
+        }
+        .FORM>*{
+            width: 90%;
+            cursor:pointer;
+            margin: 10px;
+        }
+        .FORM .in2 {
+            display: flex;
+            flex-flow:column nowrap;
+        }
+        .FORM .in1{
+            display: flex;
+            flex-flow:row nowrap;
+            justify-content: space-evenly;
+        }
+        .in1 input {
+            width: 48%;
+            height: 40px;
+            padding: 5px;
+            color:black;
+            transition:.2s all ;
+        }
+        .in2{
+            display: flex;
+            flex-flow:column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .in2 input {
+            width: 98%;
+            height: 40px;
+            padding: 5px;
+            color:black;
+            margin: 5px;
+            transition:.2s all ;
+        }
+        .FORM button {
+            width: 90%;
+            height: 30px;
+            font-size:20px;
+            font-weight: 600;
+        }
+        .in2 textarea {
+            width: 98%;
+            resize: none;
+            padding: 5px;
+            transition:.2s all ;
+            margin: 5px;
+        }
+        .in1 input:focus, .in2 input:focus, .in2 textarea:focus, .FORM button:focus{
+            outline: none;
+            box-shadow:0px 0px 10px 1px cyan
+        }
+    </style>
+</head>
+<body>
+    
+    <form method="POST" class="FORM">
+        <p>Reg Form</p>
+        <div class="in1">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Second Name">
+        </div>
+        <div class="in2">
+            <input type="text" placeholder="NickName (4 - 16 characters)" pattern="\w{4,16}">
+            <input type="email" placeholder="E-mail">
+            <input type="text" placeholder="Your Phone" pattern="+[0-9]{12}">
+            <textarea cols="30" rows="10" placeholder="Your prepering in this thing"></textarea>
+            <textarea cols="30" rows="10" placeholder="Your wish for us"></textarea>
+        </div>
+        <button type='submit'>Send</button>
+    </form>
+
+<script>
+
+</script>
+</body>
+</html>
